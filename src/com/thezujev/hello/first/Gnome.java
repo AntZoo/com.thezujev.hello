@@ -63,7 +63,7 @@ public class Gnome {
 
                 treeLine += "\n";
                 line++;
-            } else if (i == size ) {
+            } else if (i == size && size > 0 ) {
                 for (int x = 0; x < (size - 1); x++) {
                     treeLine += " ";
                 }

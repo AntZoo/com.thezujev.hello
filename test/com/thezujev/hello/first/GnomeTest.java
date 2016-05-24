@@ -49,4 +49,14 @@ public class GnomeTest {
     public void drawFiveLevelChristmasTree() throws Exception {
         assertEquals("    *\n   ***\n  *****\n *******\n*********\n    *", gnome.drawChristmasTree(5));
     }
+
+    @Test
+    public void drawZeroLevelChristmasTree() throws Exception {
+        assertEquals("", gnome.drawChristmasTree(0));
+    }
+
+    @Test
+    public void drawNegativeLevelChristmasTree() throws Exception {
+        assertEquals("", gnome.drawChristmasTree(-1));
+    }
 }
