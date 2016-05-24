@@ -7,7 +7,7 @@ import java.util.Scanner;
  * Created by zujevant on 10-May-16.
  */
 public class Gnome {
-    private int randomNumber = 0;
+    protected int randomNumber = 0;
 
     public Gnome() {
         generateRandomNumber();
@@ -33,19 +33,21 @@ public class Gnome {
         }
     }
 
-    private void generateRandomNumber() {
+    protected void generateRandomNumber() {
         randomNumber = (int) Math.round(Math.random()*100 + 1);
     }
 
-    private String greet() {
+    protected int getRandomNumber() { return randomNumber; }
+
+    protected String greet() {
         return "Hello World!";
     }
 
-    private String tellRandomNumber() {
-        return "My random number is = " + randomNumber;
+    protected String tellRandomNumber() {
+        return "My random number is " + getRandomNumber() + ".";
     }
 
-    private String drawChristmasTree(int size) {
+    protected String drawChristmasTree(int size) {
         int line = 0;
         String treeLine = "";
 
@@ -68,8 +70,6 @@ public class Gnome {
                 treeLine += "*";
             }
         }
-
-        treeLine += " ";
 
         return treeLine;
     }
