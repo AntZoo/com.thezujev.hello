@@ -31,7 +31,7 @@ public class WeekDay {
         }
     }
 
-    private String resolveDay(int nbr) throws Exception {
+    protected String resolveDay(int nbr) throws Exception {
         if (nbr > 0 && nbr < 8){
             return "That's a " + DAYS[nbr-1] + "!";
         } else if (nbr <= 0) {
