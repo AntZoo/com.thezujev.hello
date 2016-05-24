@@ -1,12 +1,12 @@
 package com.thezujev.hello.first;
 
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
+ * Tests for Gnome
  * Created by zujevant on 24.5.2016.
  */
 public class GnomeTest {

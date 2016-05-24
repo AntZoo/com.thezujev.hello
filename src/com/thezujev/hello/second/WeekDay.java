@@ -11,7 +11,11 @@ public class WeekDay {
 
     public void runMenu(){
         System.out.println("Give me a day number and I'll return you the corresponding day name. Enter 0 to return.");
-        resolveDay(init());
+        try {
+            System.out.println(resolveDay(init()));
+        } catch (Exception e) {
+            runMenu();
+        }
     }
 
     private int init(){
@@ -27,15 +31,15 @@ public class WeekDay {
         }
     }
 
-    private void resolveDay(int nbr) {
+    private String resolveDay(int nbr) throws Exception {
         if (nbr > 0 && nbr < 8){
-            System.out.println("That's a " + DAYS[nbr-1] + "!");
+            return "That's a " + DAYS[nbr-1] + "!";
         } else if (nbr <= 0) {
             System.out.println("A day cannot have a negative index or an index of zero.");
-            resolveDay(init());
+            throw new Exception();
         } else {
             System.out.println("A week only has seven days. :(");
-            resolveDay(init());
+            throw new Exception();
         }
     }
 }
