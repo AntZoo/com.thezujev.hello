@@ -34,8 +34,8 @@ public class WeekDay {
     protected String resolveDay(int nbr) throws Exception {
         if (nbr > 0 && nbr < 8){
             return "That's a " + DAYS[nbr-1] + "!";
-        } else if (nbr <= 0) {
-            System.out.println("A day cannot have a negative index or an index of zero.");
+        } else if (nbr == 0) {
+            System.out.println("A day cannot have an index of zero.");
             throw new Exception();
         } else {
             System.out.println("A week only has seven days. :(");
