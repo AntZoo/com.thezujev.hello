@@ -6,6 +6,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 /**
+ * Tests for WeekDay
  * Created by zujevant on 24.5.2016.
  */
 public class WeekDayTest {
