@@ -81,6 +81,8 @@ public class Digits {
     }
 
     protected int factorialCycle(int input) {
+        if (input == 0) { return 0; }
+
         int result = 1;
 
         while (input > 0) {
@@ -93,6 +95,8 @@ public class Digits {
     protected int digitsSumRecursion(int input) {
         if (input == 1) {
             return 1;
+        } else if (input == 0) {
+            return 0;
         } else {
             return input + digitsSumRecursion(--input);
         }
@@ -101,6 +105,8 @@ public class Digits {
     protected int factorialRecursion(int input) {
         if (input == 1) {
             return 1;
+        } else if (input == 0) {
+            return 0;
         } else {
             return input * factorialRecursion(--input);
         }
