@@ -48,12 +48,12 @@ public class Multiplication {
         }
 
         if (i < 11) {
-            System.out.println(printMultiplicationsInTable(i, 1));
+            System.out.println(printMultiplicationsInTable(i, 1).trim());
             showMultiplicationTable(++i);
         }
     }
 
-    private String printMultiplicationsInTable(int i, int multiplier) {
+    protected String printMultiplicationsInTable(int i, int multiplier) {
         String result = Integer.toString(i * multiplier);
         if (multiplier < 11) {
             return (result + ((result.matches("\\d")) ? "   " : (result.matches("\\d\\d") ? "  " : " ")) + printMultiplicationsInTable(i, ++multiplier));
