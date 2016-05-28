@@ -65,13 +65,13 @@ public class Digits {
             runDigits();
         }
         System.out.println("I've tried solving the task with a cycle and with recursion.");
-        System.out.println("With a cycle it took me " + (endTimeC - startTimeC) / 1000000 + " ms.");
-        System.out.println("With recursion it took me " + (endTimeR - startTimeR) / 1000000 + " ms.");
+        System.out.println("With a cycle the answer was " + resultC + " and it took me " + (endTimeC - startTimeC) / 1000000 + " ms to calculate.");
+        System.out.println("With recursion the answer was " + resultR + " and it took me " + (endTimeR - startTimeR) / 1000000 + " ms to calculate.");
         System.out.println("You can now compare which one was most effective.");
     }
 
     protected int digitsSumCycle(int input) {
-        int result = 1;
+        int result = 0;
 
         while (input > 0) {
             result += input--;
