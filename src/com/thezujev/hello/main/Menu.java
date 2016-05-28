@@ -3,6 +3,7 @@ package com.thezujev.hello.main;
 import com.thezujev.hello.first.Gnome;
 import com.thezujev.hello.second.Multiplication;
 import com.thezujev.hello.second.WeekDay;
+import com.thezujev.hello.third.Digits;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -30,7 +31,7 @@ class Menu {
 
         while (exitCode != 0) {
             System.out.println("This is a collection of home assignments from Tieto Czech Academy, Java for beginners course.\nPlease select the assignment you want to run:");
-            System.out.println("1. Christmas tree\n2. Weekdays\n3. Multiplication table\n0. Exit\n?  Help");
+            System.out.println("1. Christmas tree\n2. Weekdays\n3. Multiplication table\n4. Work with digits\n5. Palindromes\n0. Exit\n?  Help");
             System.out.print("> ");
             newInput = scan.nextLine();
 
@@ -75,6 +76,11 @@ class Menu {
                 case "3":
                     Multiplication multi = new Multiplication();
                     multi.runMenu();
+                    System.out.println(RETURN_MESSAGE);
+                    break;
+                case "4":
+                    Digits digi = new Digits();
+                    digi.runDigits();
                     System.out.println(RETURN_MESSAGE);
                     break;
                 default:
