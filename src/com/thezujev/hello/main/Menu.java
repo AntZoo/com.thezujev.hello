@@ -4,6 +4,7 @@ import com.thezujev.hello.first.Gnome;
 import com.thezujev.hello.second.Multiplication;
 import com.thezujev.hello.second.WeekDay;
 import com.thezujev.hello.third.Digits;
+import com.thezujev.hello.third.Palindrome;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -81,6 +82,11 @@ class Menu {
                 case "4":
                     Digits digi = new Digits();
                     digi.runDigits();
+                    System.out.println(RETURN_MESSAGE);
+                    break;
+                case "5":
+                    Palindrome palindrome = new Palindrome();
+                    palindrome.runPalindrome();
                     System.out.println(RETURN_MESSAGE);
                     break;
                 default:
